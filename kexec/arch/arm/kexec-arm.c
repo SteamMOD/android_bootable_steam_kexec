@@ -44,7 +44,7 @@ int get_memory_ranges(struct memory_range **range, int *ranges,
 		int count;
 		if (memory_ranges >= MAX_MEMORY_RANGES)
 			break;
-		count = sscanf(line, "%Lx-%Lx : %n",
+		count = sscanf(line, "%llx-%llx : %n",
 			&start, &end, &consumed);
 		if (count != 2)
 			continue;
@@ -93,6 +93,7 @@ int arch_process_options(int argc, char **argv)
 
 const struct arch_map_entry arches[] = {
 	{ "arm", KEXEC_ARCH_ARM },
+	{ "armv71", KEXEC_ARCH_ARM },
 	{ NULL, 0 },
 };
 

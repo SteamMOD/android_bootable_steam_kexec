@@ -39,12 +39,14 @@
 #include "config.h"
 
 #include <sha256.h>
+
 #include "kexec.h"
 #include "kexec-syscall.h"
 #include "kexec-elf.h"
 #include "kexec-sha256.h"
 #include "kexec-zlib.h"
 #include "kexec-lzma.h"
+
 #include <arch/options.h>
 
 unsigned long long mem_min = 0;
